@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Raj - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <button class="toggle-menu">Menu</button>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#accomplishments">Accomplishments</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+       
+    </header>
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+          <source src="https://www.youtube.com/watch?v=mOFoh9FUR8w&ab_channel=TheDezine" type="video/mp4">
+        </video>
+      </div>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <img src="raj.jpeg" alt="Raj Kumar" class="profile-pic">
+            <p>As a skilled IT professional with a Bachelor's degree in Computer Applications (BCA) from Mirza Ghalib College Gaya
+                (2020-2023), I possess a diverse set of technical skills and practical experience gained through various
+                projects. My expertise spans HTML, CSS, JavaScript, Java, C++, SQL,and C.</p>
+            <p>Throughout my academic journey, I made a project on a Student Management System in Java, which involved creating a robust application for managing student records, including enrollment, grades, and attendance tracking.
+            </p>
+
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>
+                    <h3>HTML</h3>
+                    <p>Proficient in creating well-structured and semantically correct HTML markup for web pages.</p>
+                </li>
+                <li>
+                    <h3>CSS</h3>
+                    <p>Skilled in styling web pages with CSS, including layout techniques, responsive design, and
+                        animations.</p>
+                </li>
+               
+                <li>
+                    <h3>Java</h3>
+                    <p>Strong knowledge of Java programming language, including object-oriented programming principles
+                        and data structures.</p>
+                </li>
+                <li>
+                    <h3>C++</h3>
+                    <p>Proficient in C++ programming, with expertise in object-oriented programming, data structures,
+                        and algorithms.</p>
+                </li>
+                <li>
+                    <h3>SQL</h3>
+                    <p>Skilled in writing SQL queries for database management, including creating, modifying, and
+                        querying databases.</p>
+                </li>
+                <li>
+                    <h3>C</h3>
+                    <p>Experienced in C programming language, with a strong understanding of low-level programming
+                        concepts.</p>
+                </li>
+               
+            </ul>
+        </section>
+
+        <section id="accomplishments">
+            <h2>Accomplishments</h2>
+            <ul>
+               
+                <li>
+                    <h3>Student Management System</h3>
+                    <p>Created a web-based system for managing student records, including enrollment, grades, and
+                        attendance tracking.</p>
+                </li>
+              
+
+            </ul>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <h3>MCA</h3>
+                    <p>LNCT UNIVERITY(2024-26)</p>
+                    <p>Pursuing MCA from LNCT University, enhancing skills and gaining more experience.</p>
+                </li>
+                <li>
+                    <h3>BCA</h3>
+                    <p>Mirza Ghalib College Gaya (2020-2023)</p>
+                    <p>Pursued a comprehensive curriculum covering various aspects of information technology, including
+                        programming languages, web development, databases. Gained hands-on experience
+                        through practical projects and assignments.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <div class="scroll-buttons">
+        <button class="scroll-up">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+        <button class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </button>
+    </div>
+    
+    <footer>
+        <div class="social-links">
+            <a href="#" class="social-icon" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="social-icon" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-icon" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="social-icon" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <div class="subscribe-container">
+            <input type="email" placeholder="Enter your email" class="subscribe-input">
+            <button class="subscribe-btn">Subscribe</button>
+        </div>
+        <p>&copy; Raj Kumar</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        const scrollUp = document.querySelector('.scroll-up');
+        const scrollDown = document.querySelector('.scroll-down');
+        const sections = document.querySelectorAll('section');
+
+        let currentSectionIndex = 0;
+
+        scrollUp.addEventListener('click', () => {
+            if (currentSectionIndex > 0) {
+                currentSectionIndex--;
+                sections[currentSectionIndex].scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+
+        scrollDown.addEventListener('click', () => {
+            if (currentSectionIndex < sections.length - 1) {
+                currentSectionIndex++;
+                sections[currentSectionIndex].scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    </script>
+</body>
+
+</html>
